@@ -1,7 +1,10 @@
 # Taps
-brew tap 'caskroom/cask'
-brew tap 'caskroom/versions'
-brew tap 'homebrew/bundle'
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
+tap 'caskroom/versions'
+tap 'homebrew/bundle'
+tap 'homebrew/dupes'
+tap 'homebrew/php'
 
 # Install ZSH
 brew 'zsh'
@@ -20,33 +23,55 @@ brew 'bash'
 brew 'homebrew/dupes/grep'
 
 # Install Binaries
+brew 'awscli'
 brew 'git'
+brew 'hub'
+brew "htop-osx"
+brew 'mackup'
 brew 'mas'
+brew 'node'
+brew 'tree'
+brew 'trash'
 brew 'wget'
 
 # Apps
-brew cask install '1password'
-brew cask install 'alfred'
-brew cask install 'dropbox'
-brew cask install 'evernote'
-brew cask install 'filezilla'
-brew cask install 'firefox'
-brew cask install 'google-chrome'
-brew cask install 'gdrive'
-brew cask install 'handbrakecli'
-brew cask install 'iterm2'
-brew cask install 'mou'
-brew cask install 'plex-media-server'
-brew cask install 'screaming-frog-seo-spirder'
-brew cask install 'sequel-pro'
-brew cask install 'screencloud'
-brew cask install 'skype'
-brew cask install 'slack'
-brew cask install 'sourcetree'
-brew cask install 'spotify'
-brew cask install 'u-torrent' # find out how to get bittorrent instead
+cask '1password'
+cask 'bittorrent'
+cask 'alfred'
+cask 'coda'
+cask 'dropbox'
+cask 'evernote'
+cask 'filezilla'
+cask 'firefox'
+cask 'google-chrome'
+cask 'gdrive'
+cask 'handbrakecli'
+cask 'iterm2'
+cask 'mou'
+cask 'namechanger'
+cask 'plex-media-server'
+cask 'screaming-frog-seo-spirder'
+cask 'sequel-pro'
+cask 'screencloud'
+cask 'skype'
+cask 'slack'
+cask 'sourcetree'
+cask 'spotify'
+cask 'tunnelblick'
+cask 'vagrant'
+cask 'vlc'
 
-# Install Mac Store Apps
-mas 'coda', id:  
-mas 'flycut', id:  
-mas 'integrity', id:  
+# Quicklook
+cask "betterzipql"
+cask "qlcolorcode"
+cask "qlimagesize"
+cask "qlmarkdown"
+cask "qlprettypatch"
+cask "qlstephen"
+cask "quicklook-csv"
+cask "quicklook-json"
+
+# Install Mac App Store apps
+# Note: Flycut is an outdated release in MAS, however there won't be a brew cask until 2.0 is released (https://github.com/TermiT/Flycut/issues/38)
+mas 'flycut', id: 442160987
+mas 'integrity', id: 513610341 

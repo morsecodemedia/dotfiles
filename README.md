@@ -6,10 +6,17 @@
 - [ ] Write up description of this repo
 	- [ ] What this is, why is it useful, how to use it
 	- [ ] Topic-oriented organization
-	- [ ] Shout outs, resources, etc
+	- [X] Shout outs, resources, etc
 - [ ] Get Mac Store App Ids
 - [ ] bash settings
 	- [ ] aliases  	
 - [ ] tmux settings
 - [ ] vim settings
 - [ ] zsh settings
+
+----
+## Special Thanks
+
+- [James Tomasino](https://github.com/jamestomasino/dotfiles)
+- [Dries Vints](https://github.com/driesvints/dotfiles)
+- [Maxime Fabre](https://github.com/Anahkiasen/dotfiles)
