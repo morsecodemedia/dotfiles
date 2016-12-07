@@ -10,9 +10,13 @@
 - [X] Get Mac App Store Ids
 - [ ] bash settings
 	- [ ] aliases  	
+- [ ] bin
+- [ ] git
+- [ ] slate
+- [ ] utilities
 - [ ] tmux settings
 - [ ] vim settings
-- [ ] zsh settings
+
 
 ----
 ### Credits ###
