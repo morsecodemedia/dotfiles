@@ -1,0 +1,82 @@
+###############################################################################
+################################### environment ###############################
+###############################################################################
+
+# vars
+export EDITOR="vim"
+export HISTCONTRAL=ignoredups
+export HISTFILESIZE=10000
+export HISTZIE=10000
+export HISTIGNORE="clear:keybase*"
+export LSCOLORS=gxfxcxdxbxggedabagacad
+export CLICOLOR=1
+export R_LIBS="$HOME/.rlib"
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore .sass-cache -g ""'
+
+# path vars
+export DROPBOX_PATH="$HOME/.dropbox/Dropbox"
+export SPIDEROAK_PATH="$HOME/.spideroak"
+export SSH_ENV="$HOME/.ssh/environment"
+export NODE_PATH="/usr/local/lib/jsctags:/usr/local/lib/node:/usr/bin/npm"
+export ANDROID_HOME="$HOME/android/android-sdk-macosx"
+export TODO="$DROPBOX_PATH/Todo/personal.txt"
+export NOTE_DIR="$DROPBOX_PATH/Work/GSW/notes"
+export TRACK_DIR="$DROPBOX_PATH/track"
+export SHEET_FILE="$DROPBOX_PATH/Work/GSW/ti-sheet.json"
+export TIME_LOG="$DROPBOX_PATH/Time/timelog.csv"
+
+# ruby
+export GEM_HOME="$HOME/.gem"
+export GEM_PATH="$HOME/.gem"
+
+# colors
+[[ -n "$DISPLAY" && "$TERM" = "xterm" ]] && export TERM=xterm-256color
+export DIRECTORY_COLOR="\033[38;05;222m"
+export GIT_COLOR="\033[38;05;172m"
+export STAGED_COLOR="\033[38;05;226m"
+export MODIFIED_COLOR="\033[38;05;112m"
+export UNTRACKED_COLOR="\033[38;05;117m"
+export PROMPT_COLOR="\033[38;05;88m"
+export USER_COLOR="\033[38;05;130m"
+export ROOT_COLOR="\033[38;05;160m"
+export HOST_COLOR="\033[38;05;130m"
+export TIME_COLOR="\033[38;05;60m"
+export RESET_COLOR="\033[m"
+
+# less settings
+export PAGER=less
+
+# path
+PATH=/usr/local/bin
+PATH=${PATH}:${HOME}/bin
+PATH=${PATH}:${HOME}/.node/bin
+PATH=${PATH}:${HOME}/.gem/bin
+PATH=${PATH}:${HOME}/.rbenv/bin
+PATH=${PATH}:/opt/local/bin
+PATH=${PATH}:/opt/local/sbin
+PATH=${PATH}:/usr/local/sbin
+PATH=${PATH}:/usr/local/lib
+PATH=${PATH}:/usr/local/php5/bin
+PATH=${PATH}:/usr/local/mysql/bin
+PATH=${PATH}:/usr/X11/bin
+PATH=${PATH}:/usr/bin
+PATH=${PATH}:/bin
+PATH=${PATH}:/usr/sbin
+PATH=${PATH}:/sbin
+PATH=${PATH}:.
+PATH=${PATH}:${ANDROID_HOME}/tools
+PATH=${PATH}:${ANDROID_HOME}/platform-tools
+PATH=${PATH}:/Library/Frameworks/Python.framework/Versions/Current/bin
+
+# options
+shopt -s cdspell
+shopt -s checkwinsize
+shopt -s histappend
+shopt -s nocaseglob
+
+# PROMPT COMMANDS
+PROMPT_COMMAND="history -a; history -r; $PROMPT_COMMAND"
+
+# use vim on the command line
+set -o vi
+

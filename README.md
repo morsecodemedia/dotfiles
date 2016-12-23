@@ -1,23 +1,23 @@
-# Dotfiles
+## Dotfiles
 
+----
+### What is this? ###
 ...insert description here...
-
+### Why is it useful? ###
+...insert description here...
+### How do I use it? ###  
+...insert description here...
+  
+----
 ### TODO: ###
 - [ ] Write up description of this repo
-	- [ ] What this is, why is it useful, how to use it
-	- [ ] Topic-oriented organization
-- [X] Credits
-- [X] Get Mac App Store Ids
+	- [ ] What this is
+	- [ ] Why is it useful
+	- [ ] How to use it
 - [ ] Install script decision: Shell script vs Makefile
-- [ ] bash settings
-	- [ ] aliases  	
-- [ ] bin
-- [ ] git
-- [ ] slate
-- [ ] utilities
-- [ ] tmux settings
-- [ ] vim settings
-
+	- [ ] Install script for OSX
+	- [ ] Install script for Linux
+	- [ ] Install script for Windows
 
 ----
 ### Credits ###

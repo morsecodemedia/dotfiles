@@ -82,16 +82,12 @@ brew install ssh-copy-id
 brew install vim --with-python3 --with-tcl --with-perl --override-system-vi
 brew install vimpager
 
-# ZSH
-## brew install zsh
-
 # Completions
 brew install bundler-completion
 brew install gem-completion
 brew install grunt-completion
 brew install pip-completion
 brew install vagrant-completion
-## brew install zsh-completions
 
 # Quicklook
 brew cask install betterzipql
