@@ -10,15 +10,9 @@ Dotfiles are configuration files in Unix systems that start with a dot (think of
 You can set up a new system using dotfiles and an installation script in minutes. It's not hard to get started with your own repository, but I would recommend checking out some [existing projects](https://dotfiles.github.io/). Read through the setups, the reasonings for each configuration and some of that project's inspirations. There is a lot to learn along this road. For me, this truly was more about the journey than the destination.
 
 ### How do I use it?    
-...insert description here...
-  
-----
-### TODO: ###
-- [ ] Finish how to use it
-- [ ] Finish Install script for OSX
-- [ ] Install script for Linux
-- [ ] Install script for Windows
-
+1. Clone the repo
+2. Run install.sh 
+ 
 ----
 ### Credits ###
 
@@ -27,3 +21,8 @@ You can set up a new system using dotfiles and an installation script in minutes
 - [Dries Vints](https://github.com/driesvints/dotfiles): Dries's Brewfile was the original draw/inspiration for mine, and then I expanded based on his influences and others that I've come across over time. *Although I've since removed the Brewfile from my setup, a lot of the learnings I gained from Dries was transferred to what I've currently ended up with.*
 - [Maxime Fabre](https://github.com/Anahkiasen/dotfiles): A verbose setup of OSX configurations.
 
+----
+### TODO: ###
+- [ ] Configure Slate and add it back into the install script.
+- [ ] Install script for Linux
+- [ ] Install script for Windows
