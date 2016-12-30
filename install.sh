@@ -213,3 +213,51 @@ mkdir -p ~/Sites/system/
 mkdir -p ~/Sites/work/
 mkdir -p ~/Sites/personal/
 
+### Symlinks Cleanup
+
+stow -t "$HOME" -D bash
+stow -t "$HOME" -D git
+stow -t "$HOME" -D utils
+stow -t "$HOME" -D zsh
+stow -t "$HOME/bin" -D bin
+stow -t "$HOME" -D vim
+stow -t "$HOME" -D tmux
+
+### Symlinks Topics
+
+# Bash
+stow -t "$HOME" bash
+
+# git
+stow -t "$HOME" git
+
+# utils
+stow -t "$HOME" utils
+
+# zsh
+stow -t "$HOME" zsh
+
+# bin
+stow -t "$HOME" bin
+
+# vim
+stow -t "$$HOME" vim
+if [ ! -f "$HOME/.vim/autoload/plug.vim" ]; then \
+	curl -sfLo ~/.vim/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim; \
+fi
+
+# tmux
+stow -t "$HOME" tmux
+if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then \
+	git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm" --quiet; \
+	if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then \
+		tmux source-file "$HOME/.tmux.conf"; \
+	fi \
+fi
+
+### Install Plugins
+
+vim -c ":PlugInstall|q|q" # auto install plugins
+$HOME/.tmux/plugins/tpm/bin/install_plugins
+
