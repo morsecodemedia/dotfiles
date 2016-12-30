@@ -97,7 +97,7 @@ rbenv rehash
 gem install bundler
 
 # Perl
-\curl -L http://install.perlbrew.pl | bash
+curl -L http://install.perlbrew.pl | bash
 source ~/perl5/perlbrew/etc/bashrc
 perlbrew install perl-5.16.0
 perlbrew switch perl-5.16.0
@@ -225,7 +225,7 @@ stow -t "$HOME" -D tmux
 
 ### Symlinks Topics
 
-# Bash
+# bash
 stow -t "$HOME" bash
 
 # git
@@ -240,20 +240,23 @@ stow -t "$HOME" zsh
 # bin
 stow -t "$HOME" bin
 
+# osx
+stow -t "$HOME" bin
+
 # vim
 stow -t "$$HOME" vim
-if [ ! -f "$HOME/.vim/autoload/plug.vim" ]; then \
-	curl -sfLo ~/.vim/autoload/plug.vim --create-dirs \
-		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim; \
+if [ ! -f "$HOME/.vim/autoload/plug.vim" ]; then
+	curl -sfLo ~/.vim/autoload/plug.vim --create-dirs
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim;
 fi
 
 # tmux
 stow -t "$HOME" tmux
-if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then \
-	git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm" --quiet; \
-	if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then \
-		tmux source-file "$HOME/.tmux.conf"; \
-	fi \
+if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+	git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm" --quiet;
+	if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+		tmux source-file "$HOME/.tmux.conf";
+	fi
 fi
 
 ### Install Plugins
@@ -261,3 +264,5 @@ fi
 vim -c ":PlugInstall|q|q" # auto install plugins
 $HOME/.tmux/plugins/tpm/bin/install_plugins
 
+### Set OSX System Settings
+source "$HOME/.osx/osx.sh"
