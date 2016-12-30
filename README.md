@@ -26,3 +26,4 @@ You can set up a new system using dotfiles and an installation script in minutes
 - [ ] Configure Slate and add it back into the install script.
 - [ ] Install script for Linux
 - [ ] Install script for Windows
+- [ ] Get smarter, become better.
