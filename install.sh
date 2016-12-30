@@ -123,7 +123,6 @@ brew install tig
 brew install vim --with-python3 --with-tcl --with-perl --override-system-vi
 brew install vimpager
 
-
 ### Utilities
 
 brew install tmux
@@ -183,7 +182,7 @@ brew cask install iterm2
 brew cask install mou
 brew cask install namechanger
 brew cask install plex-media-server
-brew cask install screaming-frog-seo-spirder
+brew cask install screaming-frog-seo-spider
 brew cask install sequel-pro
 brew cask install screencloud
 brew cask install skype
@@ -207,7 +206,6 @@ mas install 513610341
 
 # Microsoft Remote Desktop
 mas install 715768417
-
 
 ### Folder Structures
 
