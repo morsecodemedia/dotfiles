@@ -109,11 +109,11 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 defaults write com.apple.dock persistent-apps -array
 
 # Set default desktop background
-#curl "https://s3.amazonaws.com/squishyface/images/background.jpg" > "background.jpg"
-#sudo mv "background.jpg" "/Library/Desktop Pictures/dune.jpg"
-#rm -rf "$HOME/Library/Application\ Support/Dock/desktoppicture.db"
-#sudo rm -rf "/System/Library/CoreServices/DefaultDesktop.jpg"
-#sudo ln -s "/Library/Desktop Pictures/dune.jpg" "/System/Library/CoreServices/DefaultDesktop.jpg"
+curl "https://free4kwallpapers.com/no-watermarks/originals/2016/01/08/star-wars-the-force-awakens-poe-rey-bb8-wallpaper.jpg" > "background.jpg"
+sudo mv "background.jpg" "/Library/Desktop Pictures/swtfa01.jpg"
+rm -rf "$HOME/Library/Application\ Support/Dock/desktoppicture.db"
+sudo rm -rf "/System/Library/CoreServices/DefaultDesktop.jpg"
+sudo ln -s "/Library/Desktop Pictures/swtfa01.jpg" "/System/Library/CoreServices/DefaultDesktop.jpg"
 
 # Kill affected applications, so the changes apply
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
