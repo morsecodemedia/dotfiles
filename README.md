@@ -10,8 +10,9 @@ Dotfiles are configuration files in Unix systems that start with a dot (think of
 You can set up a new system using dotfiles and an installation script in minutes. It's not hard to get started with your own repository, but I would recommend checking out some [existing projects](https://dotfiles.github.io/). Read through the setups, the reasonings for each configuration and some of that project's inspirations. There is a lot to learn along this road. For me, this truly was more about the journey than the destination.
 
 ### How do I use it?    
-1. Clone the repo
-2. Run install.sh 
+Clone the repo.  
+		
+		$ install.sh
  
 ----
 ### Credits ###
