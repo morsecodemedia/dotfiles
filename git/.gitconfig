@@ -1,45 +1,45 @@
 [user]
-	name = morsecodemedia
+	name  = Brandon Morse
 	email = brandon@morsecodemedia.com
 
 [github]
-	user = morsecodemedia
+	user  = morsecodemedia
 
 [core]
-	whitespace = trailing-space, space-before-tab, cr-at-eol
-	excludesfile = ~/.gitignore_global
-	editor = 'vim'
-	eol = native
-	autocrlf = input
-	pager = less -r
-	compression = 9
-	bigFileThreshold = 20m
-	ignorecase = false
+	whitespace        = trailing-space, space-before-tab, cr-at-eol
+	excludesfile      = ~/.gitignore_global
+	editor            = 'vim'
+	eol               = native
+	autocrlf          = input
+	pager             = less -r
+	compression       = 9
+	bigFileThreshold  = 20m
+	ignorecase        = false
 
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+	diff        = auto
+	status      = auto
+	branch      = auto
 	interactive = auto
-	ui = auto
+	ui          = auto
 
 [diff]
-	tool = vimdiff
-	renames = copies
-	mnemonicprefix = true
-	algorithm = patience
+	tool            = vimdiff
+	renames         = copies
+	mnemonicprefix  = true
+	algorithm       = patience
 
 [difftool]
 	prompt = false
 
 [merge]
-	stat = true
-	log = true
-	tool = fugitive
+	stat  = true
+	log   = true
+	tool  = fugitive
 
 [mergetool]
-	keepBackup = false
-	prompt = false
+	keepBackup  = false
+	prompt      = false
 
 [mergetool "fugitive"]
 	cmd = vim -f -c "Gvdiff" "$MERGED"
@@ -57,8 +57,8 @@
 	prune = true
 
 [rerere]
-	enabled = true
-	autoupdate = true
+	enabled     = true
+	autoupdate  = true
 
 [rebase]
 	autosquash = true
@@ -73,11 +73,11 @@
 	postBuffer = 524288000
 
 [gitflow "prefix"]
-	feature = feature/
-	release = release/
-	hotfix = hotfix/
-	support = support/
-	versiontag = v
+	feature     = feature/
+	release     = release/
+	hotfix      = hotfix/
+	support     = support/
+	versiontag  = v
 
 [url "https://github.com/"]
 	insteadOf = gh:
@@ -89,29 +89,29 @@
 	insteadOf = bb:
 
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+	diff        = auto
+	status      = auto
+	branch      = auto
 	interactive = auto
-	ui = auto
+	ui          = auto
 
 [color "branch"]
 	current = yellow reverse
-	local = yellow
-	remote = green
+	local   = yellow
+	remote  = green
 
 [color "diff"]
-	meta = yellow bold
-	frag = magenta
-	plain = white bold
-	old = red bold
-	new = green bold
-	commit = yellow bold
-	func = green dim
+	meta    = yellow bold
+	frag    = magenta
+	plain   = white bold
+	old     = red bold
+	new     = green bold
+	commit  = yellow bold
+	func    = green dim
 
 [color "status"]
-	added = yellow
-	changed = green
+	added     = yellow
+	changed   = green
 	untracked = cyan
 
 [alias]
