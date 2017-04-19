@@ -28,13 +28,13 @@ alias systemupdate='sudo softwareupdate -i -a; brew update; brew upgrade'
 alias browserstack="java -jar ~/bin/BrowserStackTunnel.jar 8vlzgcB58bVTdLITt514 localhost,80,0"
 alias veevastart="git reset --hard HEAD && git pull && git clean -xfd && ant clean && ant globals && ant && ant thumbs && open . && open source/index.html"
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
+alias phpserver='php -S localhost:8080'
 
 # utils
 alias imgsz='sips -g pixelWidth -g pixelHeight'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
 alias cl="fc -e -| pbcopy" # copy output of last command to clipboard
 alias cpwd='pwd|tr -d "\n"|pbcopy' # copy working directory path to clipboard
-alias chess='cd ~ && /Applications/Chess.app/Contents/Resources/sjeng.ChessEngine && rm *.lrn && cd -'
 alias gempurge='gem uninstall -aIx'
 alias imagemagick='convert' # I always forget the name of the app for imagemagick
 alias figlet='figlet -c -w 204 -f univers'

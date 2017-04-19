@@ -10,9 +10,22 @@ Dotfiles are configuration files in Unix systems that start with a dot (think of
 You can set up a new system using dotfiles and an installation script in minutes. It's not hard to get started with your own repository, but I would recommend checking out some [existing projects](https://dotfiles.github.io/). Read through the setups, the reasonings for each configuration and some of that project's inspirations. There is a lot to learn along this road. For me, this truly was more about the journey than the destination.
 
 ### How do I use it?    
-Clone the repo.  
+#### Dependancies
+This install is required to have GNU Stow installed. Stow is a symlink farm manager, you can read more about it [here](https://www.gnu.org/software/stow/).  
+
+		brew install stow
+	-- or --
+		sudo apt-get install stow
 		
-		$ install.sh
+Once you have Stow installed and you've cloned the repo...  
+		
+		$ make
+Thanks to [James Tomasino](https://github.com/jamestomasino/dotfiles), the Makefile will attempt to determine your platform and install the correct files. You do have the option to specify the platform specifically `make OSX`.
+
+#### OSX Setup
+Currently, I've only implemented a setup script of OSX. For fresh machines, you should be able to run the setup directly, in which it will run the system setup, install a variety of applications, pull these dotfiles and run the setup.
+
+		curl https://github.com/morsecodemedia/dotfiles/blob/master/osx/osx.sh | bash
  
 ----
 ### Credits ###
@@ -24,7 +37,6 @@ Clone the repo.
 
 ----
 ### TODO: ###
-- [ ] Configure Slate and add it back into the install script.
 - [ ] Install script for Linux
 - [ ] Install script for Windows
 - [ ] Get smarter, become better.
