@@ -96,10 +96,9 @@ pip install qrcode
 
 # Ruby
 brew install rbenv
-brew install ruby-build
-rbenv install 2.3.0
+rbenv install 2.4.1
 rbenv rehash
-rbenv global 2.3.0
+rbenv global 2.4.1
 rbenv rehash
 gem install bundler
 
