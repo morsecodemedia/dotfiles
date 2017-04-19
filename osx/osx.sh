@@ -126,7 +126,7 @@ brew install tig
 
 ### Vim
 
-brew install vim --with-python3 --with-tcl --with-perl --override-system-vi
+brew install vim --with-python3 --with-tcl --with-perl --with-override-system-vi
 brew install vimpager
 
 ### Utilities
