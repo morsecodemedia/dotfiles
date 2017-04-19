@@ -118,7 +118,7 @@ mv composer.phar /usr/local/bin/composer
 
 ### Git
 
-brew install git git-flow-avh bash-completion gnu-getopt
+brew install git git-flow-avh gnu-getopt
 curl https://raw.githubusercontent.com/petervanderdoes/git-flow-completion/develop/git-flow-completion.bash > git-flow-completion.bash
 chmod 755 git-flow-completion.bash
 mv git-flow-completion.bash ~/.git-flow-completion.sh
