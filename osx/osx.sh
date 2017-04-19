@@ -65,9 +65,16 @@ brew tap homebrew/completions
 brew install wget
 brew install coreutils
 brew install findutils
-brew install grep
-brew install gnu-getopt
-brew install gnu-sed --default-names
+brew install binutils
+brew install diffutils
+brew install gnutls
+brew install gnu-sed --with-default-names
+brew install gnu-tar --with-default-names
+brew install gnu-which --with-default-names
+brew install grep --with-default-names
+brew install bash
+brew install make
+brew install less
 
 # Bash
 brew install bash
