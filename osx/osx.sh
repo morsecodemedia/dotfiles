@@ -57,7 +57,6 @@ brew install Caskroom/cask/xquartz
 brew tap caskroom/fonts
 brew tap caskroom/versions
 brew tap homebrew/dupes
-brew tap homebrew/dupes/grep
 brew tap homebrew/php
 brew tap homebrew/completions
 
@@ -66,6 +65,7 @@ brew tap homebrew/completions
 brew install wget
 brew install coreutils
 brew install findutils
+brew install grep
 brew install gnu-getopt
 brew install gnu-sed --default-names
 

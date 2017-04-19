@@ -25,7 +25,7 @@ Thanks to [James Tomasino](https://github.com/jamestomasino/dotfiles), the Makef
 #### OSX Setup
 Currently, I've only implemented a setup script of OSX. For fresh machines, you should be able to run the setup directly, in which it will run the system setup, install a variety of applications, pull these dotfiles and run the setup.
 
-		curl https://github.com/morsecodemedia/dotfiles/blob/master/osx/osx.sh | bash
+		curl https://raw.githubusercontent.com/morsecodemedia/dotfiles/master/osx/osx.sh | bash
  
 ----
 ### Credits ###
