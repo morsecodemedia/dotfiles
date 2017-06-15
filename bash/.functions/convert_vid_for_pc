@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+function convert_vid_for_pc() {
+	if [ $# -eq 0 ]; then
+		# No parameters
+		echo "Please provide a source video."
+	else
+		ffmpeg -i "$1" -pix_fmt yuv420p -vcodec mpeg1video -q 2 -b:v 1000k "$(basename "${1%.*}").avi"
+	fi
+}

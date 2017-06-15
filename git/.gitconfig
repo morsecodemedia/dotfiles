@@ -1,5 +1,5 @@
 [user]
-	name  = Brandon Morse
+	name = Brandon Morse
 	email = brandon@morsecodemedia.com
 
 [github]
@@ -7,7 +7,7 @@
 
 [core]
 	whitespace        = trailing-space, space-before-tab, cr-at-eol
-	excludesfile      = ~/.gitignore_global
+	excludesfile = /Users/brandon.morse/.gitignore_global
 	editor            = 'vim'
 	eol               = native
 	autocrlf          = input
@@ -24,7 +24,7 @@
 	ui          = auto
 
 [diff]
-	tool            = vimdiff
+	tool            = sourcetree
 	renames         = copies
 	mnemonicprefix  = true
 	algorithm       = patience
@@ -35,7 +35,7 @@
 [merge]
 	stat  = true
 	log   = true
-	tool  = fugitive
+	tool  = sourcetree
 
 [mergetool]
 	keepBackup  = false
@@ -46,6 +46,17 @@
 
 [mergetool "vimdiff3"]
 	cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+
+[difftool "sourcetree"]
+	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
+	path =
+
+[mergetool "sourcetree"]
+	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	trustExitCode = true
+
+[commit]
+	template = /Users/brandon.morse/.stCommitMsg
 
 [branch]
 	autosetupmerge = true
@@ -164,7 +175,7 @@
 	ll = log --graph --date=short
 
 	# git flow
-	fs = !git flow feature start 
+	fs = !git flow feature start
 	ff = !git flow feature finish $1 && git pull && git push && echo
 
 	# from https://git.wiki.kernel.org/index.php/Aliases
@@ -304,9 +315,3 @@
 
 	pconfig = config -f .git/config
 	up = "!git remote update -p; git merge --ff-only @{u}"
-[difftool "sourcetree"]
-	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
-	trustExitCode = true
