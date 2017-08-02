@@ -52,13 +52,6 @@ Thumbs.db
 # Application Specific files #
 ##############################
 
-# Vim #
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-*.un~
-Session.vim
-.netrwhist
-
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode
 
 ## Directory-based project format
