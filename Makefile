@@ -19,7 +19,7 @@ endif
 install:
 	@make $(UNAME)
 
-OSX: bash git slate utils zsh bin vim tmux gnupg
+OSX: bash git utils zsh bin vim tmux 
 Linux: bash git utils zsh bin vim tmux gnupg
 Windows: bash git utils zsh bin vim tmux
 Other: bash git utils zsh vim
