@@ -10,7 +10,7 @@ Dotfiles are configuration files in Unix systems that start with a dot (think of
 You can set up a new system using dotfiles and an installation script in minutes. It's not hard to get started with your own repository, but I would recommend checking out some [existing projects](https://dotfiles.github.io/). Read through the setups, the reasonings for each configuration and some of that project's inspirations. There is a lot to learn along this road. For me, this truly was more about the journey than the destination.
 
 ### How do I use it?
-**As of OSX 10.12.x** you will need to need to disable some things in Recovery Mode first before running the install. We can't automate this, but you can read more about the commands you will need to run here: http://osxdaily.com/2015/10/05/disable-rootless-system-integrity-protection-mac-os-x/
+
 #### Dependancies
 This install is required to have GNU Stow installed. Stow is a symlink farm manager, you can read more about it [here](https://www.gnu.org/software/stow/).
 
