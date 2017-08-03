@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 
 function convert_vid_for_winppt () {
