@@ -3,16 +3,16 @@ set -e # exit on any nonzero command
 
 # Command Line Tools
 
-# xcode-select --install
-# sleep 1
-# osascript <<EOD
-#   tell application "System Events"
-#     tell process "Install Command Line Developer Tools"
-#       keystroke return
-#       click button "Agree" of window "License Agreement"
-#     end tell
-#   end tell
-# EOD
+xcode-select --install
+sleep 1
+osascript <<EOD
+  tell application "System Events"
+    tell process "Install Command Line Developer Tools"
+      keystroke return
+      click button "Agree" of window "License Agreement"
+    end tell
+  end tell
+EOD
 
 # Clean up Default Files
 
@@ -77,7 +77,7 @@ brew install make
 brew install less
 
 # Bash
-brew install bash
+brew install spellcheck
 brew install bash-completion
 
 ### Programing Languages
@@ -111,6 +111,10 @@ perlbrew switch perl-5.16.0
 # Node
 brew install node
 npm install -g grunt-cli
+npm install -g jshint
+npm install -g standard
+npm install -g jsonlint
+npm install -g gulp
 
 # Install Composer
 curl -sS https://getcomposer.org/installer | php
@@ -136,9 +140,10 @@ brew install reattach-to-user-namespace
 brew install jq
 brew install ssh-copy-id
 brew install awscli
+brew install unrar
 brew install calc
 brew install libvpx
-brew install ffmpeg --with-libvpx
+brew install ffmpeg --with-libvpx --with-theora --with-libvorbis --with-fdk-aac --with-tools --with-freetype --with-libass --with-libvpx --with-x265
 brew install gpg
 brew install gpgtools
 brew install hub
@@ -147,7 +152,6 @@ brew install imagemagick
 brew install keybase
 brew install lynx
 brew install mas
-brew install node
 brew install p7zip
 brew install stow
 brew install tree
@@ -172,39 +176,43 @@ brew cask install qlstephen
 brew cask install quicklook-csv
 brew cask install quicklook-json
 
-### Apps
-
+### Device Agnostic Apps
 brew cask install 1password
-brew cask install bittorrent
 brew cask install alfred
-brew cask install coda
 brew cask install dropbox
 brew cask install evernote
 brew cask install filezilla
 brew cask install firefox
 brew cask install google-chrome
 brew cask install gdrive
-brew cask install handbrakecli
+brew cask install gpgtools
 brew cask install iterm2
 brew cask install mou
-brew cask install namechanger
-brew cask install plex-media-server
 brew cask install screaming-frog-seo-spider
 brew cask install sequel-pro
-brew cask install screencloud
 brew cask install skype
 brew cask install slack
 brew cask install slate
 brew cask install sourcetree
-brew cask install spotify
-brew cask install tunnelblick
 brew cask install vagrant
 brew cask install vagrant-manager
 brew cask install virtualbox
 brew cask install virtualbox-extension-pack
 brew cask install vlc
 
+### Personal Device Apps
+echo "There are additional applications I would like to install if this is a personal device. Would you like these applications?(yes/no)"
+read input
+if [ "$input" = "yes" ]; then
+	brew cask install bittorrent
+	brew cask install handbrakecli
+	brew cask install namechanger
+	brew cask install plex-media-server
+	brew cask install tunnelblick
+fi
+
 ### Install Mac App Store apps
+brew install mas
 
 # FlyCut
 mas install 442160987
@@ -223,6 +231,9 @@ mas install 931134707
 mkdir -p ~/Sites/system/
 mkdir -p ~/Sites/work/
 mkdir -p ~/Sites/personal/
+mkdir -p ~/Sites/sync/Dropbox
+mkdir -p ~/.dropbox
+ln -s ~/Sites/sync/Dropbox ~/.dropbox/Dropbox
 mkdir -p ~/Documents/receipts/
 
 ### Dotfiles
@@ -234,6 +245,8 @@ cd ~/Sites/system/dotfiles && ./make
 
 vim -c ":PlugInstall|q|q" # auto install plugins
 $HOME/.tmux/plugins/tpm/bin/install_plugins
+
+brew install gpg
 
 ### OSX setup
 
@@ -247,10 +260,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo nvram SystemAudioVolume=" "
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0.02
+defaults write NSGlobalDomain KeyRepeat -int 2
 
 # Set a shorter Delay until key repeat
-defaults write NSGlobalDomain InitialKeyRepeat -int 12
+defaults write NSGlobalDomain InitialKeyRepeat -int 25
 
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
@@ -259,8 +272,8 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 chflags nohidden ~/Library
 
 # Store screenshots in subfolder on desktop
-mkdir ~/Desktop/Screenshots
-defaults write com.apple.screencapture location ~/Desktop/Screenshots
+if [ ! -d "$HOME/Desktop/Screenshots" ]; then mkdir -p "$HOME/Desktop/Screenshots"; fi
+defaults write com.apple.screencapture location "$HOME/Desktop/Screenshots"
 
 # Disable the 'Are you sure you want to open this application?' dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
