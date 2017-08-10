@@ -101,6 +101,7 @@ rbenv rehash
 rbenv global 2.4.1
 rbenv rehash
 gem install bundler
+gem install sprocketize
 
 # Perl
 curl -L http://install.perlbrew.pl | bash
@@ -141,6 +142,7 @@ brew install jq
 brew install ssh-copy-id
 brew install awscli
 brew install unrar
+brew install ant
 brew install calc
 brew install libvpx
 brew install ffmpeg --with-libvpx --with-theora --with-libvorbis --with-fdk-aac --with-tools --with-freetype --with-libass --with-libvpx --with-x265
