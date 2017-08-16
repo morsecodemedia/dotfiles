@@ -15,13 +15,16 @@
 	compression       = 9
 	bigFileThreshold  = 20m
 	ignorecase        = false
-  packedGitLimit    = 128m
-  packedGitWindowSize = 128m
+  packedGitLimit    = 256m
+  packedGitWindowSize = 256m
 
 [pack]
-  deltaCacheSize = 128m
-  packSizeLimit = 128m
-  windowMemory = 128m
+  deltaCacheSize = 256m
+  packSizeLimit = 256m
+  windowMemory = 256m
+  sizeLimit = 256m
+  threads = 1
+  window = 0
 
 [color]
 	diff        = auto
@@ -89,6 +92,7 @@
 
 [http]
 	postBuffer = 524288000
+	sslVerify = false
 
 [gitflow "prefix"]
 	feature     = feature/

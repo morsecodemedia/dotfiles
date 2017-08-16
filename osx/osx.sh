@@ -123,7 +123,7 @@ mv composer.phar /usr/local/bin/composer
 
 ### Git
 
-brew install git git-flow-avh gnu-getopt
+brew install git git-flow-avh gnu-getopt git-lfs
 curl https://raw.githubusercontent.com/petervanderdoes/git-flow-completion/develop/git-flow-completion.bash > git-flow-completion.bash
 chmod 755 git-flow-completion.bash
 mv git-flow-completion.bash ~/.git-flow-completion.sh
@@ -257,6 +257,9 @@ sudo -v
 
 # Keepalive for sudo until done
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# install git lfs globally
+git lfs install --system
 
 # Set volume to 0 at boot
 sudo nvram SystemAudioVolume=" "
