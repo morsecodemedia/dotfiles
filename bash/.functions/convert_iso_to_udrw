@@ -5,7 +5,7 @@ function convert_iso_to_udrw () {
     echo "Missing ISO to convert as argument."
   else
     if [ -f "$1" ] ; then
-      pname="$(basename "${1%.*}")-web"
+      pname="$(basename "${1%.*}")"
       hdiutil convert -format UDRW -o "$pname.img" "$1"
     else
       echo "ISO file does not exist"
