@@ -75,7 +75,6 @@ brew install grep --with-default-names
 brew install bash
 brew install make
 brew install less
-brew install the_silver_searcher
 
 # Bash
 brew install spellcheck
@@ -159,6 +158,7 @@ brew install p7zip
 brew install stow
 brew install tree
 brew install youtube-dl
+brew install the_silver_searcher
 
 ### Completions
 
