@@ -159,6 +159,7 @@ brew install stow
 brew install tree
 brew install youtube-dl
 brew install the_silver_searcher
+brew install streamlink
 
 ### Completions
 

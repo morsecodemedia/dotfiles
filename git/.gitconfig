@@ -59,7 +59,7 @@
 
 [difftool "sourcetree"]
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 
 [mergetool "sourcetree"]
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
@@ -147,11 +147,11 @@
 	# remove a file or folder from git history. Will require a push -f
 	balefire = "!f() { git filter-branch --index-filter \"git rm -rf --cached --ignore-unmatch $1\" HEAD; rm -rf .git/refs/original/ ; git reflog expire --all ; git gc --aggressive --prune; }; f"
 
-  # squash entire repo to a single commit (requires --force to push)
+  	# squash entire repo to a single commit (requires --force to push)
 	squash = "!git reset $(git commit-tree HEAD^{tree} -m 'initial commit') "
 
-  # List remote Git branches and the last commit date for each branch. Sort by most recent commit date.
-  latestremote = "!git for-each-ref refs/remotes/ --format=\"%(color:green)%(committerdate:short)%(color:reset) %(color:yellow)%(refname:short)%(color:reset)\" --sort -committerdate"
+  	# List remote Git branches and the last commit date for each branch. Sort by most recent commit date.
+  	latestremote = "!git for-each-ref refs/remotes/ --format=\"%(color:green)%(committerdate:short)%(color:reset) %(color:yellow)%(refname:short)%(color:reset)\" --sort -committerdate"
 
 	l = log --no-merges
 
@@ -332,3 +332,8 @@
 
 	pconfig = config -f .git/config
 	up = "!git remote update -p; git merge --ff-only @{u}"
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
