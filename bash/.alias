@@ -29,6 +29,7 @@ alias browserstack="java -jar ~/bin/BrowserStackTunnel.jar 8vlzgcB58bVTdLITt514 
 alias veevastart="git reset --hard HEAD && git pull && git clean -xfd && ant clean && ant globals && ant && ant thumbs && open . && open source/index.html"
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 alias phpserver='php -S localhost:8080'
+alias xiaserver='php -S 127.0.0.1:3000'
 
 # utils
 alias imgsz='sips -g pixelWidth -g pixelHeight'

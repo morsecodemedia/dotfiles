@@ -87,12 +87,12 @@ brew cask install java
 
 # Python
 brew install python --with-brewed-openssl
-pip install --upgrade setuptools
-pip install --upgrade pip
-pip install --user pyyaml
-pip install --user colorama
-pip install rtv
-pip install qrcode
+pip2 install --upgrade setuptools
+pip2 install --upgrade pip
+pip2 install --user pyyaml
+pip2 install --user colorama
+pip2 install rtv
+pip2 install qrcode
 
 # Ruby
 brew install rbenv
@@ -159,6 +159,7 @@ brew install stow
 brew install tree
 brew install youtube-dl
 brew install the_silver_searcher
+brew install streamlink
 
 ### Completions
 

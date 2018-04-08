@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function convert_iso_to_udrw () {
+function iso2udrw () {
   if [ $# -eq 0 ]; then
     echo "Missing ISO to convert as argument."
   else
