@@ -40,6 +40,8 @@ alias gempurge='gem uninstall -aIx'
 alias imagemagick='convert' # I always forget the name of the app for imagemagick
 alias figlet='figlet -c -w 204 -f univers'
 
+alias dskill="find . -name '*.DS_Store' -type f -ls -delete"
+
 # vim
 alias vime='vim -u ~/.vimrc.encryption.local -x'
 alias vimr='vim -u NONE'
