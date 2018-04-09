@@ -67,6 +67,7 @@ brew install coreutils
 brew install findutils
 brew install binutils
 brew install diffutils
+brew install recutils
 brew install gnutls
 brew install gnu-sed --with-default-names
 brew install gnu-tar --with-default-names
