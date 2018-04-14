@@ -112,18 +112,21 @@ perlbrew switch perl-5.16.0
 
 # Node
 brew install node
-npm install -g grunt-cli
-npm install -g jshint
-npm install -g standard
-npm install -g jsonlint
-npm install -g gulp
+brew install yarn
+yarn global add grunt-cli
+yarn global add jshint
+yarn global add standard
+yarn global add jsonlint
+yarn global add gulp
+
+# Vue
+yarn global add @vue/cli
 
 # Install Composer
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
 ### Git
-
 brew install git git-flow-avh gnu-getopt git-lfs
 curl https://raw.githubusercontent.com/petervanderdoes/git-flow-completion/develop/git-flow-completion.bash > git-flow-completion.bash
 chmod 755 git-flow-completion.bash
@@ -131,12 +134,10 @@ mv git-flow-completion.bash ~/.git-flow-completion.sh
 brew install tig
 
 ### Vim
-
 brew install vim --with-python3 --with-tcl --with-perl --with-override-system-vi
 brew install vimpager
 
 ### Utilities
-
 brew install tmux
 brew install reattach-to-user-namespace
 brew install jq
@@ -163,7 +164,6 @@ brew install the_silver_searcher
 brew install streamlink
 
 ### Completions
-
 brew install bundler-completion
 brew install gem-completion
 brew install grunt-completion
@@ -171,7 +171,6 @@ brew install pip-completion
 brew install vagrant-completion
 
 ### Quicklook
-
 brew cask install betterzipql
 brew cask install qlcolorcode
 brew cask install qlimagesize
@@ -185,14 +184,12 @@ brew cask install quicklook-json
 brew cask install 1password
 brew cask install alfred
 brew cask install dropbox
-brew cask install evernote
 brew cask install filezilla
 brew cask install firefox
 brew cask install google-chrome
 brew cask install gdrive
 brew cask install gpgtools
 brew cask install iterm2
-brew cask install mou
 brew cask install screaming-frog-seo-spider
 brew cask install sequel-pro
 brew cask install skype
