@@ -77,6 +77,9 @@ brew install bash
 brew install make
 brew install less
 
+### Fonts
+brew cask install font-fira-code
+
 # Bash
 brew install spellcheck
 brew install bash-completion
