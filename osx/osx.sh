@@ -193,12 +193,8 @@ brew cask install google-chrome
 brew cask install gdrive
 brew cask install gpgtools
 brew cask install iterm2
-brew cask install screaming-frog-seo-spider
 brew cask install sequel-pro
-brew cask install skype
-brew cask install slack
 brew cask install slate
-brew cask install sourcetree
 brew cask install vagrant
 brew cask install vagrant-manager
 brew cask install virtualbox
