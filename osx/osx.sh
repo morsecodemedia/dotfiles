@@ -1,20 +1,14 @@
 #!/bin/sh
 set -e # exit on any nonzero command
 
-# Command Line Tools
+# Command Line Tools #
 
-xcode-select --install
-sleep 1
-osascript <<EOD
-  tell application "System Events"
-    tell process "Install Command Line Developer Tools"
-      keystroke return
-      click button "Agree" of window "License Agreement"
-    end tell
-  end tell
-EOD
+# Manually install command line tools for relevant version of xcode & macOS
+#   https://developer.apple.com/download/more/
+#   MacOS 10.12.6 & XCode 9.2 =>
+#     https://download.developer.apple.com/Developer_Tools/Command_Line_Tools_macOS_10.12_for_Xcode_9.2/Command_Line_Tools_macOS_10.12_for_Xcode_9.2.dmg
 
-# Clean up Default Files
+# Clean up Default Files #
 
 if [ -f "$HOME/.profile" ]; then
 	rm "$HOME/.profile"
@@ -40,19 +34,21 @@ if [ -f "$HOME/.viminfo" ]; then
 	rm "$HOME/.viminfo"
 fi
 
-### Homebrew
+# Homebrew #
 
-if test ! $(which brew); then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+# Reset permissions on /usr/local
+sudo chown -R $USER /usr/local
 
-# Update Homebrew recipes
+# Try uninstalling homebrew first in case the system shipped with something stupid
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+
+# Now install it fresh
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update && brew upgrade
 
 ### Taps
 
 brew tap homebrew/bundle
-brew tap caskroom/cask
 brew install Caskroom/cask/xquartz
 brew tap caskroom/fonts
 brew tap caskroom/versions
@@ -64,11 +60,11 @@ brew tap homebrew/completions
 
 brew install wget
 brew install coreutils
-brew install findutils
+brew install findutils --with-default-names
 brew install binutils
 brew install diffutils
 brew install recutils
-brew install gnutls
+brew install gnutls --with-default-names
 brew install gnu-sed --with-default-names
 brew install gnu-tar --with-default-names
 brew install gnu-which --with-default-names
@@ -91,21 +87,20 @@ brew cask install java
 
 # Python
 brew install python --with-brewed-openssl
-pip2 install --upgrade setuptools
-pip2 install --upgrade pip
-pip2 install --user pyyaml
-pip2 install --user colorama
-pip2 install rtv
-pip2 install qrcode
+brew install python2
+pip3 install --upgrade pip setuptools wheel
+pip install --upgrade pip setuptools
+pip3 install --user pyyaml colorama
+pip3 install rtv qrcode csvkit
 
 # Ruby
 brew install rbenv
-rbenv install 2.4.1
+brew install ruby-build
+rbenv install 2.5.3
 rbenv rehash
-rbenv global 2.4.1
+rbenv global 2.5.3
 rbenv rehash
 gem install bundler
-gem install sprocketize
 
 # Perl
 curl -L http://install.perlbrew.pl | bash
@@ -113,14 +108,14 @@ source ~/perl5/perlbrew/etc/bashrc
 perlbrew install perl-5.16.0
 perlbrew switch perl-5.16.0
 
-# Node
-brew install node
-brew install yarn
-yarn global add grunt-cli
-yarn global add jshint
-yarn global add standard
-yarn global add jsonlint
-yarn global add gulp
+# Javascript Libraries
+# Install using website install package
+	# https://nodejs.org/en/
+brew install yarn --without-node
+yarn global add eslint
+
+# Angular
+yarn global add @angular/cli
 
 # Vue
 yarn global add @vue/cli
@@ -159,6 +154,7 @@ brew install imagemagick
 brew install keybase
 brew install lynx
 brew install mas
+brew install mysql
 brew install p7zip
 brew install stow
 brew install tree
@@ -194,7 +190,6 @@ brew cask install gdrive
 brew cask install gpgtools
 brew cask install iterm2
 brew cask install sequel-pro
-brew cask install slate
 brew cask install vagrant
 brew cask install vagrant-manager
 brew cask install virtualbox
@@ -213,17 +208,12 @@ if [ "$input" = "yes" ]; then
 fi
 
 ### Install Mac App Store apps
-brew install mas
-
 # FlyCut
 mas install 442160987
-
 # Integrity
 mas install 513610341
-
 # Microsoft Remote Desktop
 mas install 715768417
-
 # Wire
 mas install 931134707
 
@@ -235,7 +225,7 @@ mkdir -p ~/Sites/personal/
 mkdir -p ~/Sites/sync/Dropbox
 mkdir -p ~/.dropbox
 ln -s ~/Sites/sync/Dropbox ~/.dropbox/Dropbox
-mkdir -p ~/Documents/receipts/
+mkdir -p ~/Desktop/receipts/
 
 ### Dotfiles
 
