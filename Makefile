@@ -19,8 +19,8 @@ endif
 install:
 	@make $(UNAME)
 
-OSX: bash git utils zsh bin vim tmux 
-Linux: bash git utils zsh bin vim tmux gnupg
+OSX: bash git R utils zsh bin vim tmux weechat
+Linux: bash git R utils zsh bin vim tmux gnupg weechat
 Windows: bash git utils zsh bin vim tmux
 Other: bash git utils zsh vim
 
@@ -28,13 +28,14 @@ clean:
 	@printf "$(RED)--- clean -----------------------------------------------\n$(RESET)"
 	stow -t "$$HOME" -D bash
 	stow -t "$$HOME" -D git
-	stow -t "$$HOME" -D slate
+	stow -t "$$HOME" -D R
 	stow -t "$$HOME" -D utils
 	stow -t "$$HOME" -D zsh
 	stow -t "$$HOME/bin" -D bin
 	stow -t "$$HOME" -D vim
 	stow -t "$$HOME" -D tmux
 	stow -t "$$HOME" -D gnupg
+	stow -t "$$HOME/.weechat" -D weechat
 
 bash:
 	@printf "$(YELLOW)--- bash ------------------------------------------------\n$(RESET)"
@@ -44,9 +45,13 @@ git:
 	@printf "$(YELLOW)--- git -------------------------------------------------\n$(RESET)"
 	stow -t "$$HOME" git
 
-slate:
-	@printf "$(YELLOW)--- slate -----------------------------------------------\n$(RESET)"
-	stow -t "$$HOME" slate
+weechat:
+	@printf "$(YELLOW)--- weechat ---------------------------------------------\n$(RESET)"
+	mkdir -p "$$HOME/.weechat"
+	stow -t "$$HOME/.weechat" weechat
+
+R:
+	@printf "$(YELLOW)--- R ---------------------------------------------------\n$(RESET)"
 
 utils:
 	@printf "$(YELLOW)--- utils -----------------------------------------------\n$(RESET)"
@@ -85,4 +90,4 @@ tmux:
 	fi
 	@printf "    $(GREEN)Launch tmux and run \`I to install plugins\n$(RESET)"
 
-.PHONY: bash git slate utils zsh bin vim tmux clean install OSX Windows Linux Other gnupg
+.PHONY: bash git R utils zsh bin vim tmux clean install OSX Windows Linux Other gnupg weechat
