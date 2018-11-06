@@ -19,3 +19,9 @@ fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # vim: set sw=4 ts=4 sts=4 et tw=78 nospell:
+
+###-tns-completion-start-###
+if [ -f /Users/brandon.morse/.tnsrc ]; then 
+    source /Users/brandon.morse/.tnsrc 
+fi
+###-tns-completion-end-###
