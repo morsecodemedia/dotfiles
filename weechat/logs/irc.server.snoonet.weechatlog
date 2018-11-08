@@ -1,0 +1,101 @@
+2018-09-11 11:27:00	ℹ 	irc: connecting to server irc.snoonet.org/6697 (SSL)...
+2018-09-11 11:27:01	ℹ 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-09-11 11:27:01	ℹ 	gnutls: receiving 4 certificates
+2018-09-11 11:27:01	ℹ 	 - certificate[1] info:
+2018-09-11 11:27:01	ℹ 	   - subject `CN=*.snoonet.org,OU=Domain Control Validated', issuer `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x0e11a9541c556120, RSA key 2048 bits, signed using RSA-SHA256, activated `2018-03-01 20:31:09 UTC', expires `2019-03-01 20:31:09 UTC', pin-sha256="ZRGEB1Levc3dv7waYCQ7KPD016QCUOuFpwSpn06gOrI="
+2018-09-11 11:27:01	ℹ 	 - certificate[2] info:
+2018-09-11 11:27:01	ℹ 	   - subject `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x07, RSA key 2048 bits, signed using RSA-SHA256, activated `2011-05-03 07:00:00 UTC', expires `2031-05-03 07:00:00 UTC', pin-sha256="8Rw90Ej3Ttt8RRkrg+WYDS9n7IS03bk5bjP/UXPtaY8="
+2018-09-11 11:27:01	ℹ 	 - certificate[3] info:
+2018-09-11 11:27:01	ℹ 	   - subject `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x1be715, RSA key 2048 bits, signed using RSA-SHA256, activated `2014-01-01 07:00:00 UTC', expires `2031-05-30 07:00:00 UTC', pin-sha256="Ko8tivDrEjiY90yGasP6ZpBU4jwXvHqVvQI0GS3GNdA="
+2018-09-11 11:27:01	ℹ 	 - certificate[4] info:
+2018-09-11 11:27:01	ℹ 	   - subject `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x00, RSA key 2048 bits, signed using RSA-SHA1, activated `2004-06-29 17:06:20 UTC', expires `2034-06-29 17:06:20 UTC', pin-sha256="VjLZe/p3W/PJnd6lL8JVNBCGQBZynFLdZSTIqcO0SJ8="
+2018-09-11 11:27:01	⚠ 	gnutls: peer's certificate is NOT trusted
+2018-09-11 11:27:01	⚠ 	gnutls: peer's certificate issuer is unknown
+2018-09-11 11:27:01	⚠ 	irc: TLS handshake failed
+2018-09-11 11:27:01	⚠ 	irc: error: Error in the certificate.
+2018-09-11 11:27:01	ℹ 	irc: reconnecting to server in 10 seconds
+2018-09-11 11:27:11	ℹ 	irc: reconnecting to server...
+2018-09-11 11:27:11	ℹ 	irc: connecting to server irc.snoonet.org/6697 (SSL)...
+2018-09-11 11:27:11	ℹ 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-09-11 11:27:11	ℹ 	gnutls: receiving 4 certificates
+2018-09-11 11:27:11	ℹ 	 - certificate[1] info:
+2018-09-11 11:27:11	ℹ 	   - subject `CN=*.snoonet.org,OU=Domain Control Validated', issuer `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x0e11a9541c556120, RSA key 2048 bits, signed using RSA-SHA256, activated `2018-03-01 20:31:09 UTC', expires `2019-03-01 20:31:09 UTC', pin-sha256="ZRGEB1Levc3dv7waYCQ7KPD016QCUOuFpwSpn06gOrI="
+2018-09-11 11:27:11	ℹ 	 - certificate[2] info:
+2018-09-11 11:27:11	ℹ 	   - subject `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x07, RSA key 2048 bits, signed using RSA-SHA256, activated `2011-05-03 07:00:00 UTC', expires `2031-05-03 07:00:00 UTC', pin-sha256="8Rw90Ej3Ttt8RRkrg+WYDS9n7IS03bk5bjP/UXPtaY8="
+2018-09-11 11:27:11	ℹ 	 - certificate[3] info:
+2018-09-11 11:27:11	ℹ 	   - subject `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x1be715, RSA key 2048 bits, signed using RSA-SHA256, activated `2014-01-01 07:00:00 UTC', expires `2031-05-30 07:00:00 UTC', pin-sha256="Ko8tivDrEjiY90yGasP6ZpBU4jwXvHqVvQI0GS3GNdA="
+2018-09-11 11:27:11	ℹ 	 - certificate[4] info:
+2018-09-11 11:27:11	ℹ 	   - subject `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x00, RSA key 2048 bits, signed using RSA-SHA1, activated `2004-06-29 17:06:20 UTC', expires `2034-06-29 17:06:20 UTC', pin-sha256="VjLZe/p3W/PJnd6lL8JVNBCGQBZynFLdZSTIqcO0SJ8="
+2018-09-11 11:27:11	⚠ 	gnutls: peer's certificate is NOT trusted
+2018-09-11 11:27:11	⚠ 	gnutls: peer's certificate issuer is unknown
+2018-09-11 11:27:11	⚠ 	irc: TLS handshake failed
+2018-09-11 11:27:11	⚠ 	irc: error: Error in the certificate.
+2018-09-11 11:27:11	ℹ 	irc: reconnecting to server in 20 seconds
+2018-09-11 11:27:31	ℹ 	irc: reconnecting to server...
+2018-09-11 11:27:31	ℹ 	irc: connecting to server irc.snoonet.org/6697 (SSL)...
+2018-09-11 11:27:31	ℹ 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-09-11 11:27:31	ℹ 	gnutls: receiving 4 certificates
+2018-09-11 11:27:31	ℹ 	 - certificate[1] info:
+2018-09-11 11:27:31	ℹ 	   - subject `CN=*.snoonet.org,OU=Domain Control Validated', issuer `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x0e11a9541c556120, RSA key 2048 bits, signed using RSA-SHA256, activated `2018-03-01 20:31:09 UTC', expires `2019-03-01 20:31:09 UTC', pin-sha256="ZRGEB1Levc3dv7waYCQ7KPD016QCUOuFpwSpn06gOrI="
+2018-09-11 11:27:31	ℹ 	 - certificate[2] info:
+2018-09-11 11:27:31	ℹ 	   - subject `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x07, RSA key 2048 bits, signed using RSA-SHA256, activated `2011-05-03 07:00:00 UTC', expires `2031-05-03 07:00:00 UTC', pin-sha256="8Rw90Ej3Ttt8RRkrg+WYDS9n7IS03bk5bjP/UXPtaY8="
+2018-09-11 11:27:31	ℹ 	 - certificate[3] info:
+2018-09-11 11:27:31	ℹ 	   - subject `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x1be715, RSA key 2048 bits, signed using RSA-SHA256, activated `2014-01-01 07:00:00 UTC', expires `2031-05-30 07:00:00 UTC', pin-sha256="Ko8tivDrEjiY90yGasP6ZpBU4jwXvHqVvQI0GS3GNdA="
+2018-09-11 11:27:31	ℹ 	 - certificate[4] info:
+2018-09-11 11:27:31	ℹ 	   - subject `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x00, RSA key 2048 bits, signed using RSA-SHA1, activated `2004-06-29 17:06:20 UTC', expires `2034-06-29 17:06:20 UTC', pin-sha256="VjLZe/p3W/PJnd6lL8JVNBCGQBZynFLdZSTIqcO0SJ8="
+2018-09-11 11:27:31	⚠ 	gnutls: peer's certificate is NOT trusted
+2018-09-11 11:27:31	⚠ 	gnutls: peer's certificate issuer is unknown
+2018-09-11 11:27:31	⚠ 	irc: TLS handshake failed
+2018-09-11 11:27:31	⚠ 	irc: error: Error in the certificate.
+2018-09-11 11:27:31	ℹ 	irc: reconnecting to server in 40 seconds
+2018-09-11 11:28:11	ℹ 	irc: reconnecting to server...
+2018-09-11 11:28:11	ℹ 	irc: connecting to server irc.snoonet.org/6697 (SSL)...
+2018-09-11 11:28:12	ℹ 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-09-11 11:28:12	ℹ 	gnutls: receiving 4 certificates
+2018-09-11 11:28:12	ℹ 	 - certificate[1] info:
+2018-09-11 11:28:12	ℹ 	   - subject `CN=*.snoonet.org,OU=Domain Control Validated', issuer `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x0e11a9541c556120, RSA key 2048 bits, signed using RSA-SHA256, activated `2018-03-01 20:31:09 UTC', expires `2019-03-01 20:31:09 UTC', pin-sha256="ZRGEB1Levc3dv7waYCQ7KPD016QCUOuFpwSpn06gOrI="
+2018-09-11 11:28:12	ℹ 	 - certificate[2] info:
+2018-09-11 11:28:12	ℹ 	   - subject `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x07, RSA key 2048 bits, signed using RSA-SHA256, activated `2011-05-03 07:00:00 UTC', expires `2031-05-03 07:00:00 UTC', pin-sha256="8Rw90Ej3Ttt8RRkrg+WYDS9n7IS03bk5bjP/UXPtaY8="
+2018-09-11 11:28:12	ℹ 	 - certificate[3] info:
+2018-09-11 11:28:12	ℹ 	   - subject `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x1be715, RSA key 2048 bits, signed using RSA-SHA256, activated `2014-01-01 07:00:00 UTC', expires `2031-05-30 07:00:00 UTC', pin-sha256="Ko8tivDrEjiY90yGasP6ZpBU4jwXvHqVvQI0GS3GNdA="
+2018-09-11 11:28:12	ℹ 	 - certificate[4] info:
+2018-09-11 11:28:12	ℹ 	   - subject `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x00, RSA key 2048 bits, signed using RSA-SHA1, activated `2004-06-29 17:06:20 UTC', expires `2034-06-29 17:06:20 UTC', pin-sha256="VjLZe/p3W/PJnd6lL8JVNBCGQBZynFLdZSTIqcO0SJ8="
+2018-09-11 11:28:12	⚠ 	gnutls: peer's certificate is NOT trusted
+2018-09-11 11:28:12	⚠ 	gnutls: peer's certificate issuer is unknown
+2018-09-11 11:28:12	⚠ 	irc: TLS handshake failed
+2018-09-11 11:28:12	⚠ 	irc: error: Error in the certificate.
+2018-09-11 11:28:12	ℹ 	irc: reconnecting to server in 1 minute, 20 seconds
+2018-09-11 11:29:32	ℹ 	irc: reconnecting to server...
+2018-09-11 11:29:32	ℹ 	irc: connecting to server irc.snoonet.org/6697 (SSL)...
+2018-09-11 11:29:33	ℹ 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-09-11 11:29:33	ℹ 	gnutls: receiving 4 certificates
+2018-09-11 11:29:33	ℹ 	 - certificate[1] info:
+2018-09-11 11:29:33	ℹ 	   - subject `CN=*.snoonet.org,OU=Domain Control Validated', issuer `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x0e11a9541c556120, RSA key 2048 bits, signed using RSA-SHA256, activated `2018-03-01 20:31:09 UTC', expires `2019-03-01 20:31:09 UTC', pin-sha256="ZRGEB1Levc3dv7waYCQ7KPD016QCUOuFpwSpn06gOrI="
+2018-09-11 11:29:33	ℹ 	 - certificate[2] info:
+2018-09-11 11:29:33	ℹ 	   - subject `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x07, RSA key 2048 bits, signed using RSA-SHA256, activated `2011-05-03 07:00:00 UTC', expires `2031-05-03 07:00:00 UTC', pin-sha256="8Rw90Ej3Ttt8RRkrg+WYDS9n7IS03bk5bjP/UXPtaY8="
+2018-09-11 11:29:33	ℹ 	 - certificate[3] info:
+2018-09-11 11:29:33	ℹ 	   - subject `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x1be715, RSA key 2048 bits, signed using RSA-SHA256, activated `2014-01-01 07:00:00 UTC', expires `2031-05-30 07:00:00 UTC', pin-sha256="Ko8tivDrEjiY90yGasP6ZpBU4jwXvHqVvQI0GS3GNdA="
+2018-09-11 11:29:33	ℹ 	 - certificate[4] info:
+2018-09-11 11:29:33	ℹ 	   - subject `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x00, RSA key 2048 bits, signed using RSA-SHA1, activated `2004-06-29 17:06:20 UTC', expires `2034-06-29 17:06:20 UTC', pin-sha256="VjLZe/p3W/PJnd6lL8JVNBCGQBZynFLdZSTIqcO0SJ8="
+2018-09-11 11:29:33	⚠ 	gnutls: peer's certificate is NOT trusted
+2018-09-11 11:29:33	⚠ 	gnutls: peer's certificate issuer is unknown
+2018-09-11 11:29:33	⚠ 	irc: TLS handshake failed
+2018-09-11 11:29:33	⚠ 	irc: error: Error in the certificate.
+2018-09-11 11:29:33	ℹ 	irc: reconnecting to server in 2 minutes, 40 seconds
+2018-09-11 11:32:13	ℹ 	irc: reconnecting to server...
+2018-09-11 11:32:13	ℹ 	irc: connecting to server irc.snoonet.org/6697 (SSL)...
+2018-09-11 11:32:13	ℹ 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-09-11 11:32:13	ℹ 	gnutls: receiving 4 certificates
+2018-09-11 11:32:13	ℹ 	 - certificate[1] info:
+2018-09-11 11:32:13	ℹ 	   - subject `CN=*.snoonet.org,OU=Domain Control Validated', issuer `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x0e11a9541c556120, RSA key 2048 bits, signed using RSA-SHA256, activated `2018-03-01 20:31:09 UTC', expires `2019-03-01 20:31:09 UTC', pin-sha256="ZRGEB1Levc3dv7waYCQ7KPD016QCUOuFpwSpn06gOrI="
+2018-09-11 11:32:13	ℹ 	 - certificate[2] info:
+2018-09-11 11:32:13	ℹ 	   - subject `CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', serial 0x07, RSA key 2048 bits, signed using RSA-SHA256, activated `2011-05-03 07:00:00 UTC', expires `2031-05-03 07:00:00 UTC', pin-sha256="8Rw90Ej3Ttt8RRkrg+WYDS9n7IS03bk5bjP/UXPtaY8="
+2018-09-11 11:32:13	ℹ 	 - certificate[3] info:
+2018-09-11 11:32:13	ℹ 	   - subject `CN=Go Daddy Root Certificate Authority - G2,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x1be715, RSA key 2048 bits, signed using RSA-SHA256, activated `2014-01-01 07:00:00 UTC', expires `2031-05-30 07:00:00 UTC', pin-sha256="Ko8tivDrEjiY90yGasP6ZpBU4jwXvHqVvQI0GS3GNdA="
+2018-09-11 11:32:13	ℹ 	 - certificate[4] info:
+2018-09-11 11:32:13	ℹ 	   - subject `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', issuer `OU=Go Daddy Class 2 Certification Authority,O=The Go Daddy Group\, Inc.,C=US', serial 0x00, RSA key 2048 bits, signed using RSA-SHA1, activated `2004-06-29 17:06:20 UTC', expires `2034-06-29 17:06:20 UTC', pin-sha256="VjLZe/p3W/PJnd6lL8JVNBCGQBZynFLdZSTIqcO0SJ8="
+2018-09-11 11:32:13	⚠ 	gnutls: peer's certificate is NOT trusted
+2018-09-11 11:32:13	⚠ 	gnutls: peer's certificate issuer is unknown
+2018-09-11 11:32:13	⚠ 	irc: TLS handshake failed
+2018-09-11 11:32:13	⚠ 	irc: error: Error in the certificate.
+2018-09-11 11:32:13	ℹ 	irc: reconnecting to server in 5 minutes, 20 seconds

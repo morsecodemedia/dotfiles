@@ -1,0 +1,77 @@
+2018-09-11 11:27:00	ℹ 	irc: connecting to server chat.freenode.net/6697 (SSL)...
+2018-09-11 11:27:01	ℹ 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-09-11 11:27:01	ℹ 	gnutls: receiving 2 certificates
+2018-09-11 11:27:01	ℹ 	 - certificate[1] info:
+2018-09-11 11:27:01	ℹ 	   - subject `CN=kornbluth.freenode.net', issuer `CN=Let's Encrypt Authority X3,O=Let's Encrypt,C=US', serial 0x031c0f505b921aca2085878d721614766c23, RSA key 4096 bits, signed using RSA-SHA256, activated `2018-07-18 17:25:44 UTC', expires `2018-10-16 17:25:44 UTC', pin-sha256="RbMyecKixOdaDVpxuJynSjxFqbLEXxWHOjVtS9FqzZE="
+2018-09-11 11:27:01	ℹ 	 - certificate[2] info:
+2018-09-11 11:27:01	ℹ 	   - subject `CN=Let's Encrypt Authority X3,O=Let's Encrypt,C=US', issuer `CN=DST Root CA X3,O=Digital Signature Trust Co.', serial 0x0a0141420000015385736a0b85eca708, RSA key 2048 bits, signed using RSA-SHA256, activated `2016-03-17 16:40:46 UTC', expires `2021-03-17 16:40:46 UTC', pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="
+2018-09-11 11:27:01	⚠ 	gnutls: peer's certificate is NOT trusted
+2018-09-11 11:27:01	⚠ 	gnutls: peer's certificate issuer is unknown
+2018-09-11 11:27:01	⚠ 	irc: TLS handshake failed
+2018-09-11 11:27:01	⚠ 	irc: error: Error in the certificate.
+2018-09-11 11:27:01	ℹ 	irc: reconnecting to server in 10 seconds
+2018-09-11 11:27:11	ℹ 	irc: reconnecting to server...
+2018-09-11 11:27:11	ℹ 	irc: connecting to server chat.freenode.net/6697 (SSL)...
+2018-09-11 11:27:11	ℹ 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-09-11 11:27:11	ℹ 	gnutls: receiving 2 certificates
+2018-09-11 11:27:11	ℹ 	 - certificate[1] info:
+2018-09-11 11:27:11	ℹ 	   - subject `CN=karatkievich.freenode.net', issuer `CN=Let's Encrypt Authority X3,O=Let's Encrypt,C=US', serial 0x034eaff53aa85e23dd272676ea3cd429c378, RSA key 4096 bits, signed using RSA-SHA256, activated `2018-07-18 17:24:26 UTC', expires `2018-10-16 17:24:26 UTC', pin-sha256="obvkroeuB13U1CRq+9S+7Ijw9pIJda3fPgXF7iDmHQg="
+2018-09-11 11:27:11	ℹ 	 - certificate[2] info:
+2018-09-11 11:27:11	ℹ 	   - subject `CN=Let's Encrypt Authority X3,O=Let's Encrypt,C=US', issuer `CN=DST Root CA X3,O=Digital Signature Trust Co.', serial 0x0a0141420000015385736a0b85eca708, RSA key 2048 bits, signed using RSA-SHA256, activated `2016-03-17 16:40:46 UTC', expires `2021-03-17 16:40:46 UTC', pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="
+2018-09-11 11:27:11	⚠ 	gnutls: peer's certificate is NOT trusted
+2018-09-11 11:27:11	⚠ 	gnutls: peer's certificate issuer is unknown
+2018-09-11 11:27:11	⚠ 	irc: TLS handshake failed
+2018-09-11 11:27:11	⚠ 	irc: error: Error in the certificate.
+2018-09-11 11:27:11	ℹ 	irc: reconnecting to server in 20 seconds
+2018-09-11 11:27:31	ℹ 	irc: reconnecting to server...
+2018-09-11 11:27:31	ℹ 	irc: connecting to server chat.freenode.net/6697 (SSL)...
+2018-09-11 11:27:31	ℹ 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-09-11 11:27:31	ℹ 	gnutls: receiving 2 certificates
+2018-09-11 11:27:31	ℹ 	 - certificate[1] info:
+2018-09-11 11:27:31	ℹ 	   - subject `CN=karatkievich.freenode.net', issuer `CN=Let's Encrypt Authority X3,O=Let's Encrypt,C=US', serial 0x034eaff53aa85e23dd272676ea3cd429c378, RSA key 4096 bits, signed using RSA-SHA256, activated `2018-07-18 17:24:26 UTC', expires `2018-10-16 17:24:26 UTC', pin-sha256="obvkroeuB13U1CRq+9S+7Ijw9pIJda3fPgXF7iDmHQg="
+2018-09-11 11:27:31	ℹ 	 - certificate[2] info:
+2018-09-11 11:27:31	ℹ 	   - subject `CN=Let's Encrypt Authority X3,O=Let's Encrypt,C=US', issuer `CN=DST Root CA X3,O=Digital Signature Trust Co.', serial 0x0a0141420000015385736a0b85eca708, RSA key 2048 bits, signed using RSA-SHA256, activated `2016-03-17 16:40:46 UTC', expires `2021-03-17 16:40:46 UTC', pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="
+2018-09-11 11:27:31	⚠ 	gnutls: peer's certificate is NOT trusted
+2018-09-11 11:27:31	⚠ 	gnutls: peer's certificate issuer is unknown
+2018-09-11 11:27:31	⚠ 	irc: TLS handshake failed
+2018-09-11 11:27:31	⚠ 	irc: error: Error in the certificate.
+2018-09-11 11:27:31	ℹ 	irc: reconnecting to server in 40 seconds
+2018-09-11 11:28:11	ℹ 	irc: reconnecting to server...
+2018-09-11 11:28:11	ℹ 	irc: connecting to server chat.freenode.net/6697 (SSL)...
+2018-09-11 11:28:11	ℹ 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-09-11 11:28:11	ℹ 	gnutls: receiving 2 certificates
+2018-09-11 11:28:11	ℹ 	 - certificate[1] info:
+2018-09-11 11:28:11	ℹ 	   - subject `CN=card.freenode.net', issuer `CN=Let's Encrypt Authority X3,O=Let's Encrypt,C=US', serial 0x03733577b5295dd440b5da1ebf3f4621de2f, RSA key 4096 bits, signed using RSA-SHA256, activated `2018-07-18 17:02:54 UTC', expires `2018-10-16 17:02:54 UTC', pin-sha256="kK+ut4A5qoGqyxfORm/2KPeU2VoCvz5WGDdesWNtNVY="
+2018-09-11 11:28:11	ℹ 	 - certificate[2] info:
+2018-09-11 11:28:11	ℹ 	   - subject `CN=Let's Encrypt Authority X3,O=Let's Encrypt,C=US', issuer `CN=DST Root CA X3,O=Digital Signature Trust Co.', serial 0x0a0141420000015385736a0b85eca708, RSA key 2048 bits, signed using RSA-SHA256, activated `2016-03-17 16:40:46 UTC', expires `2021-03-17 16:40:46 UTC', pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="
+2018-09-11 11:28:11	⚠ 	gnutls: peer's certificate is NOT trusted
+2018-09-11 11:28:11	⚠ 	gnutls: peer's certificate issuer is unknown
+2018-09-11 11:28:11	⚠ 	irc: TLS handshake failed
+2018-09-11 11:28:11	⚠ 	irc: error: Error in the certificate.
+2018-09-11 11:28:11	ℹ 	irc: reconnecting to server in 1 minute, 20 seconds
+2018-09-11 11:29:31	ℹ 	irc: reconnecting to server...
+2018-09-11 11:29:31	ℹ 	irc: connecting to server chat.freenode.net/6697 (SSL)...
+2018-09-11 11:29:31	ℹ 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-09-11 11:29:31	ℹ 	gnutls: receiving 2 certificates
+2018-09-11 11:29:31	ℹ 	 - certificate[1] info:
+2018-09-11 11:29:31	ℹ 	   - subject `CN=card.freenode.net', issuer `CN=Let's Encrypt Authority X3,O=Let's Encrypt,C=US', serial 0x03733577b5295dd440b5da1ebf3f4621de2f, RSA key 4096 bits, signed using RSA-SHA256, activated `2018-07-18 17:02:54 UTC', expires `2018-10-16 17:02:54 UTC', pin-sha256="kK+ut4A5qoGqyxfORm/2KPeU2VoCvz5WGDdesWNtNVY="
+2018-09-11 11:29:31	ℹ 	 - certificate[2] info:
+2018-09-11 11:29:31	ℹ 	   - subject `CN=Let's Encrypt Authority X3,O=Let's Encrypt,C=US', issuer `CN=DST Root CA X3,O=Digital Signature Trust Co.', serial 0x0a0141420000015385736a0b85eca708, RSA key 2048 bits, signed using RSA-SHA256, activated `2016-03-17 16:40:46 UTC', expires `2021-03-17 16:40:46 UTC', pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="
+2018-09-11 11:29:31	⚠ 	gnutls: peer's certificate is NOT trusted
+2018-09-11 11:29:31	⚠ 	gnutls: peer's certificate issuer is unknown
+2018-09-11 11:29:31	⚠ 	irc: TLS handshake failed
+2018-09-11 11:29:31	⚠ 	irc: error: Error in the certificate.
+2018-09-11 11:29:31	ℹ 	irc: reconnecting to server in 2 minutes, 40 seconds
+2018-09-11 11:32:11	ℹ 	irc: reconnecting to server...
+2018-09-11 11:32:11	ℹ 	irc: connecting to server chat.freenode.net/6697 (SSL)...
+2018-09-11 11:32:11	ℹ 	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2018-09-11 11:32:11	ℹ 	gnutls: receiving 2 certificates
+2018-09-11 11:32:11	ℹ 	 - certificate[1] info:
+2018-09-11 11:32:11	ℹ 	   - subject `CN=card.freenode.net', issuer `CN=Let's Encrypt Authority X3,O=Let's Encrypt,C=US', serial 0x03733577b5295dd440b5da1ebf3f4621de2f, RSA key 4096 bits, signed using RSA-SHA256, activated `2018-07-18 17:02:54 UTC', expires `2018-10-16 17:02:54 UTC', pin-sha256="kK+ut4A5qoGqyxfORm/2KPeU2VoCvz5WGDdesWNtNVY="
+2018-09-11 11:32:11	ℹ 	 - certificate[2] info:
+2018-09-11 11:32:11	ℹ 	   - subject `CN=Let's Encrypt Authority X3,O=Let's Encrypt,C=US', issuer `CN=DST Root CA X3,O=Digital Signature Trust Co.', serial 0x0a0141420000015385736a0b85eca708, RSA key 2048 bits, signed using RSA-SHA256, activated `2016-03-17 16:40:46 UTC', expires `2021-03-17 16:40:46 UTC', pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="
+2018-09-11 11:32:11	⚠ 	gnutls: peer's certificate is NOT trusted
+2018-09-11 11:32:11	⚠ 	gnutls: peer's certificate issuer is unknown
+2018-09-11 11:32:11	⚠ 	irc: TLS handshake failed
+2018-09-11 11:32:11	⚠ 	irc: error: Error in the certificate.
+2018-09-11 11:32:11	ℹ 	irc: reconnecting to server in 5 minutes, 20 seconds
