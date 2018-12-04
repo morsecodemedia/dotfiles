@@ -88,3 +88,8 @@ alias tron='ssh sshtron.zachlatta.com'
 
 # rickroll
 alias roll='curl -s -L http://bit.ly/10hA8iC | bash'
+
+# Use neovim if it exists
+if hash nvim 2>/dev/null; then
+  alias vim='nvim'
+fi

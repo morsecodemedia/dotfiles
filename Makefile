@@ -19,7 +19,7 @@ endif
 install:
 	@make $(UNAME)
 
-OSX: bash git R utils zsh bin vim neovim tmux weechat
+OSX: weechat bash git R utils zsh bin vim neovim tmux
 Linux: bash git R utils zsh bin vim tmux gnupg weechat
 Windows: bash git utils zsh bin vim tmux
 Other: bash git utils zsh vim
