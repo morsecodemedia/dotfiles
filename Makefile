@@ -19,7 +19,7 @@ endif
 install:
 	@make $(UNAME)
 
-OSX: bash git R utils zsh bin vim tmux weechat
+OSX: bash git R utils zsh bin vim neovim tmux weechat
 Linux: bash git R utils zsh bin vim tmux gnupg weechat
 Windows: bash git utils zsh bin vim tmux
 Other: bash git utils zsh vim
@@ -32,6 +32,7 @@ clean:
 	stow -t "$$HOME" -D utils
 	stow -t "$$HOME" -D zsh
 	stow -t "$$HOME/bin" -D bin
+	stow -t "$$HOME/.config/nvim/" -D neovim
 	stow -t "$$HOME" -D vim
 	stow -t "$$HOME" -D tmux
 	stow -t "$$HOME" -D gnupg
@@ -49,6 +50,16 @@ weechat:
 	@printf "$(YELLOW)--- weechat ---------------------------------------------\n$(RESET)"
 	mkdir -p "$$HOME/.weechat"
 	stow -t "$$HOME/.weechat" weechat
+
+neovim:
+	@printf "$(YELLOW)--- neovim ----------------------------------------------\n$(RESET)"
+	mkdir -p "$$HOME/.config/nvim"
+	stow -t "$$HOME/.config/nvim/" neovim
+	if [ ! -f "$$HOME/.local/share/nvim/site/autoload/plug.vim" ]; then \
+		curl -sfLo "$$HOME/.local/share/nvim/site/autoload/plug.vim" --create-dirs \
+			https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim; \
+	fi
+	@printf "    $(GREEN)Launch nvim and run :PlugInstall\n"
 
 R:
 	@printf "$(YELLOW)--- R ---------------------------------------------------\n$(RESET)"
@@ -90,4 +101,4 @@ tmux:
 	fi
 	@printf "    $(GREEN)Launch tmux and run \`I to install plugins\n$(RESET)"
 
-.PHONY: bash git R utils zsh bin vim tmux clean install OSX Windows Linux Other gnupg weechat
+.PHONY: bash git R utils zsh bin vim tmux clean install OSX Windows Linux Other gnupg weechat neovim
