@@ -20,7 +20,7 @@ install:
 	@make $(UNAME)
 
 OSX: weechat bash git R utils zsh bin vim neovim tmux
-Linux: bash git R utils zsh bin vim tmux gnupg weechat
+Linux: bash git R utils zsh bin vim tmux neovim weechat
 Windows: bash git utils zsh bin vim tmux
 Other: bash git utils zsh vim
 
@@ -35,7 +35,6 @@ clean:
 	stow -t "$$HOME/.config/nvim/" -D neovim
 	stow -t "$$HOME" -D vim
 	stow -t "$$HOME" -D tmux
-	stow -t "$$HOME" -D gnupg
 	stow -t "$$HOME/.weechat" -D weechat
 
 bash:
@@ -86,10 +85,6 @@ vim:
 	fi
 	@printf "    $(GREEN)Launch vim and run :PlugInstall\n"
 
-gnupg:
-	@printf "$(YELLOW)--- gnupg -----------------------------------------------\n$(RESET)"
-	stow -t "$$HOME" gnupg
-
 tmux:
 	@printf "$(YELLOW)--- tmux ------------------------------------------------\n$(RESET)"
 	stow -t "$$HOME" tmux
@@ -101,4 +96,4 @@ tmux:
 	fi
 	@printf "    $(GREEN)Launch tmux and run \`I to install plugins\n$(RESET)"
 
-.PHONY: bash git R utils zsh bin vim tmux clean install OSX Windows Linux Other gnupg weechat neovim
+.PHONY: bash git R utils zsh bin vim tmux clean install OSX Windows Linux Other weechat neovim
