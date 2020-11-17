@@ -17,6 +17,11 @@ export CLICOLOR=1
 export R_LIBS="$HOME/.rlib"
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore .sass-cache -g ""'
 
+# XDG
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+
 # path vars
 export DROPBOX_PATH="$HOME/.dropbox/Dropbox"
 export SPIDEROAK_PATH="$HOME/.spideroak"

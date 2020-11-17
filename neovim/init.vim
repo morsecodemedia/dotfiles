@@ -8,12 +8,12 @@ call plug#begin('~/.vim/plugged')
 
 " Global
 Plug 'embear/vim-localvimrc'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
-Plug 'junegunn/vim-easy-align'            " <Enter> to visually align
-Plug 'tpope/vim-commentary'               " gcc to toggle comments
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Styling
-Plug 'reedes/vim-colors-pencil'
+Plug 'reedes/vim-colors-pencil'           " A soft, pretty theme
+Plug 'pgdouyon/vim-yin-yang'              " A minimalist b+w theme
 
 " Writing/Authoring Tools
 Plug 'reedes/vim-pencil'                  " Super-powered writing things
@@ -27,16 +27,22 @@ Plug 'reedes/vim-wordy'                   " Weasel words and passive voice
 Plug 'nelstrom/vim-markdown-folding'      " Smart folding for markdown
 
 " Development Tools
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }                                   " Language Server Protocol
+Plug 'neitanod/vim-clevertab'             " simple tab chains
+Plug 'tpope/vim-commentary'               " gcc to toggle comments
 Plug 'airblade/vim-gitgutter'             " git changes
 Plug 'tpope/vim-fugitive'                 " git wrapper
-Plug 'w0rp/ale'                           " linting
+Plug 'dense-analysis/ale'                 " linting
 Plug 'othree/yajs.vim'                    " javascript syntax
 Plug 'othree/es.next.syntax.vim'          " es.next support
 Plug 'posva/vim-vue'                      " vue specific syntax support
-Plug 'https://gitlab.com/jamestomasino/vim-conceal.git' " conceal formatting for js/py
-Plug 'terryma/vim-multiple-cursors'       " multiple cursor support
+Plug 'https://github.com/jamestomasino/vim-conceal' " conceal formatting for js/py
 Plug 'leafgarland/typescript-vim'         " typescript syntax
 Plug 'junegunn/vim-easy-align'            " align code on characters
+Plug 'ollykel/v-vim'                      " v programming language
 
 call plug#end()
 
@@ -45,7 +51,7 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 function! InitDirs()
-    let l:parent = $HOME
+    let l:parent = $XDG_CACHE_HOME
     let l:prefix = 'vim'
     let l:dir_list = {
                 \ 'backup': 'backupdir',
@@ -56,7 +62,7 @@ function! InitDirs()
         let l:dir_list['undo'] = 'undodir'
     endif
 
-    let l:common_dir = l:parent . '/.' . l:prefix
+    let l:common_dir = l:parent . '/' . l:prefix
 
     for [l:dirname, l:settingname] in items(l:dir_list)
         let l:directory = l:common_dir . l:dirname . '/'
@@ -86,17 +92,24 @@ function! StripTrailingWhitespace()
     endif
 endfunction
 
-function! CleverTab()
-    if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
-        return "\<Tab>"
-    else
-        return "\<C-N>"
-    endif
-endfunction
-
 function! MyHighlights() abort
     highlight clear SignColumn      " SignColumn should match background
     highlight clear LineNr          " Current line number row will have same background color in relative mode
+endfunction
+
+function! Print()
+    let &printheader = " "
+    hardcopy > %:r.ps
+    !ps2pdf %:r.ps
+    !rm %:r.ps
+endfunction
+
+function! LinterStatus() abort
+   let l:counts = ale#statusline#Count(bufnr(''))
+   return l:counts.total == 0 ? '' : printf(
+   \ ' %d ',
+   \ l:counts.total
+   \)
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -105,7 +118,12 @@ endfunction
 
 if has('autocmd')
 
-    autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif 
+    autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+    augroup fzf
+        autocmd! FileType fzf
+        autocmd  FileType fzf set laststatus=0 noshowmode noruler | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+    augroup END
 
     augroup func_whitespace
         autocmd!
@@ -156,7 +174,7 @@ if has('autocmd')
 
     augroup type_json
         autocmd!
-        autocmd filetype json setlocal equalprg=python\ -m\ json.tool
+        autocmd filetype json setlocal equalprg=python3\ -m\ json.tool
     augroup END
 
     augroup type_make
@@ -255,9 +273,31 @@ let g:vue_disable_pre_processors=1
 " }}}
 
 " Ale {{{
-let b:ale_linters = {'javascript': ['eslint','prettier']}
-let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
-let g:ale_javascript_prettier_use_local_config = 1
+let g:ale_linter_aliases = {'vue': ['vue', 'javascript']}
+let b:ale_linters = {'javascript': ['eslint']}
+let b:ale_linters = {'scss': ['stylelint']}
+let g:ale_linters = {'vue': ['eslint', 'vls']}
+let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
+let b:ale_fixers = {'scss': ['stylelint']}
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_text_changed = 'always'
+let g:ale_lint_delay = 1000
+let g:ale_sign_error = '×'
+let g:ale_sign_warning = '-'
+" }}}
+
+" LSP {{{
+let g:LanguageClient_serverCommands = {
+    \ 'javascript': ['javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+    \ 'python': ['pyls'],
+    \ 'sh': ['bash-language-server', 'start'],
+    \ 'html': ['html-languageserver', '--stdio'],
+    \ 'scss': ['css-languageserver --stdio'],
+    \ }
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 " }}}
 
 " ag support {{{
@@ -274,6 +314,7 @@ set background=dark             " Use dark theme
 set backup                      " Backups are nice ...
 set clipboard^=unnamed,unnamedplus
 set colorcolumn=80
+set completeopt=noinsert,menuone,noselect
 set cursorline                  " Highlight current line
 set expandtab
 set fileencoding=utf-8
@@ -297,7 +338,7 @@ set relativenumber number       " Use relative line numbers
 set scrolljump=5                " Lines to scroll when cursor leaves screen
 set scrolloff=3                 " Minimum lines to keep above and below cursor
 set shiftwidth=2
-set shortmess+=aoOtTI           " Abbrev. of messages (avoids 'hit enter')
+set shortmess+=caoOtTI           " Abbrev. of messages (avoids 'hit enter')
 set showmatch                   " Show matching brackets/parenthesis
 set showmode                    " Display the current mode
 set softtabstop=2
@@ -330,25 +371,28 @@ endif
 " }}}
 
 " Statusline {{{
-if has('statusline')
-    set laststatus=2
+hi statusline guifg=black guibg=#8fbfdc ctermfg=black ctermbg=cyan
 
-    set statusline=
-    set statusline+=%#Search#\ %n\ 
-    set statusline+=%#PmenuSel#
-    set statusline+=%#CursorLine#
-    set statusline+=\ %f\ 
-    set statusline+=%h%m%r%w
-    set statusline+=%=
-    set statusline+=\ %y\ 
-    set statusline+=%#Menu#
-    set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-    set statusline+=\ [%{&fileformat}\]\ 
-    set statusline+=%#PmenuSel#
-    set statusline+=\ %p%%
-    set statusline+=\ %l:%c
-    set statusline+=\ 
-endif
+set laststatus=2
+set noshowmode
+set statusline=
+set statusline+=%0*\ %n\                                    " Buffer number
+set statusline+=%1*\ %<%F%m%r%h%w\                          " File path, modified, readonly, helpfile, preview
+set statusline+=%3*│                                        " Separator
+set statusline+=%5*%{LinterStatus()}
+set statusline+=%3*│                                        " Separator
+set statusline+=%=                                          " Right Side
+set statusline+=%2*%y                                       " FileType
+set statusline+=\ [%{&ff}:                                  " FileFormat (dos/unix..)
+set statusline+=%2*%{''.(&fenc!=''?&fenc:&enc).''}]         " Encoding
+set statusline+=%3*│                                        " Separator
+set statusline+=%1*\ %02v×%02l/%L\                          " Column×Line Number/Total Lines
+
+hi User1 ctermfg=007 ctermbg=239 guibg=#4e4e4e guifg=#adadad
+hi User2 ctermfg=007 ctermbg=236 guibg=#303030 guifg=#adadad
+hi User3 ctermfg=236 ctermbg=236 guibg=#303030 guifg=#303030
+hi User4 ctermfg=239 ctermbg=239 guibg=#4e4e4e guifg=#4e4e4e
+hi User5 ctermfg=255 ctermbg=009 guibg=#e10000 guifg=#ffffff
 " }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -372,14 +416,20 @@ set pastetoggle=<Leader>z
 " }}}
 
 " Buffers {{{
-nnoremap <Leader>a :argadd <C-R>=fnameescape(expand('%:p:h'))<CR>/*<C-D>
-nnoremap <Leader>b :b <C-D>
+nnoremap <Leader>a :Files<CR>
+nnoremap <Leader>A :GFiles<CR>
+nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>s :b#<CR>
 nnoremap <leader>w :bd<CR>
 " }}}
 
-" Tab Completion {{{
-inoremap <Tab> <C-R>=CleverTab()<CR>
+" TabChain {{{
+inoremap <silent><tab> <c-r>=CleverTab#Complete('start')<cr>
+                      \<c-r>=CleverTab#Complete('tab')<cr>
+                      \<c-r>=CleverTab#Complete('omni')<cr>
+                      \<c-r>=CleverTab#Complete('keyword')<cr>
+                      \<c-r>=CleverTab#Complete('stop')<cr>
+inoremap <silent><s-tab> <c-r>=CleverTab#Complete('prev')<cr>
 " }}}
 
 " Make {{{
@@ -443,11 +493,6 @@ cnoremap cd. lcd %:p:h
 
 " clear search results {{{
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
-" }}}
-
-" easy-align {{{
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
 " }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
